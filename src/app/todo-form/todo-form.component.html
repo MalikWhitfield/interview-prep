@@ -1,0 +1,24 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="todoForm">
+  <div>
+    <label> Title </label>
+    <input type="text" formGroupName="title" />
+    <div
+      *ngIf="
+        todoForm.controls['title'].invalid && todoForm.controls['title'].touched
+      "
+    ></div>
+    <p *ngIf="todoForm.controls['title'].hasError('required')">
+      Title is required.
+    </p>
+    <small *ngIf="todoForm.controls['title'].hasError('minlength')">
+      Title must be at least 5 characters long.
+    </small>
+  </div>
+  <div>
+    <label>
+      <input type="checkbox" formControlName="completed" />
+      Completed
+    </label>
+  </div>
+  <button type="submit" [disabled]="todoForm.invalid">Submit</button>
+</form>

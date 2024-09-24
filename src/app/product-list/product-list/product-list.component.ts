@@ -18,7 +18,6 @@ export class ProductListComponent {
   ngOnInit() {
     this.productService.getProducts().subscribe((res) => {
       this.todos = res;
-      console.log(res);
     });
   }
 }
