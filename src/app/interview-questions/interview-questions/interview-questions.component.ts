@@ -18,4 +18,23 @@ export class InterviewQuestionsComponent {
       return undefined;
     }
   };
+
+  // Void Type. A function that doesn't return anything
+  doSomething(): void {
+    console.log('do something');
+  }
+
+  // Generics in TypeScript
+  addItem = <T>(obj: T) => {
+    const id = Math.random().toString();
+    return { ...obj, id };
+  };
+
+  user = { name: 'Jack' };
+
+  result = this.addItem(this.user);
+
+  ngOnInit() {
+    console.log(this.result);
+  }
 }
