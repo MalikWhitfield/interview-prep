@@ -6,5 +6,4 @@ import { AppComponent } from './app.component';
 export const routes: Routes = [
   { path: 'todo', component: TodoFormComponent },
   { path: 'products', component: ProductListComponent },
-  //   { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
