@@ -13,7 +13,5 @@ export class TodoComponent {
 
   constructor() {}
 
-  ngOnInit() {
-    console.log(this.todo);
-  }
+  ngOnInit() {}
 }
